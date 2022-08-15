@@ -54,11 +54,11 @@ if streamlit.button('Get Fruit Load List'):
   my_data_rows = get_fruit_load_list()
   streamlit.dataframe(my_data_rows)
 
-insert_fruit_choice = streamlit.text_input('What fruit would you like to add?','Jackfruit')
-my_cur_1 = my_cnx.cursor()
-insert_query = "insert into fruit_load_list values ('"+insert_fruit_choice + "')"
+#insert_fruit_choice = streamlit.text_input('What fruit would you like to add?','Jackfruit')
+#my_cur_1 = my_cnx.cursor()
+#insert_query = "insert into fruit_load_list values ('"+insert_fruit_choice + "')"
 #streamlit.text(insert_query)
-my_cur_1.execute(insert_query)
-streamlit.write('The user entered ', insert_fruit_choice)
+#my_cur_1.execute(insert_query)
+#streamlit.write('The user entered ', insert_fruit_choice)
 
 my_cur.execute("insert into fruit_load_list values('from streamlit')")
