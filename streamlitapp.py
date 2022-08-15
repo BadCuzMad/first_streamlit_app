@@ -47,6 +47,7 @@ streamlit.header("The fruit load list contains")
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
     my_cur.execute("select * from fruit_load_list")
+    my_cur.execute("insert into fruit_load_list values('from streamlit')")
     return my_cur.fetchall()
 
 if streamlit.button('Get Fruit Load List'):
@@ -60,5 +61,3 @@ if streamlit.button('Get Fruit Load List'):
 #streamlit.text(insert_query)
 #my_cur_1.execute(insert_query)
 #streamlit.write('The user entered ', insert_fruit_choice)
-
-my_cur.execute("insert into fruit_load_list values('from streamlit')")
